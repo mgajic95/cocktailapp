@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personalized Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Dodajte Bootstrap CSS link ovde -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Dodajte Bootstrap container za sadržaj -->
+    <div class="container">
+        <!-- Personalizovana poruka -->
+        <h2 class="text-center text-white">Dobrodošli u Cocktail App, {{ user_name }}!</h2>
+        <!-- Dugme za pocetnu stranicu -->
+        <a href="/" class="btn btn-primary">Nazad</a>
+        <!-- Dugme za prikazivanje liste koktela -->
+        <a href="/cocktail_list_all" class="btn btn-primary">Cocktail List</a>
+    </div>
+
+    <!-- Dodajte Bootstrap JavaScript i jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

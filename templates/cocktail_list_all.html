@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cocktail List</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Dodajte Bootstrap CSS link ovde -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Dodajte Bootstrap container za sadržaj -->
+    <div class="container">
+        <!-- Personalizovana poruka -->
+        <h2 class="text-center text-white">Dobrodošli u Cocktail App, {{ user_name }}!</h2>
+
+        <!-- Prikazivanje slike i detalja za Mojito -->
+      <div class="container">
+    <h2 class="text-center text-white">Cocktail List</h2>
+    <div class="row">
+        <div class="col-md-2 mb-2">
+            <img src="{{ url_for('static', filename='images/mojito.jpg') }}" alt="Mojito" style="max-width: 100%; height: 150px;" class="d-inline-block">
+            <br>
+            <a href="/mojito" class="btn btn-primary d-inline-block" style="width: 100px;">Mojito</a>
+        </div>
+        <div class="col-md-2 mb-2">
+            <img src="{{ url_for('static', filename='images/daiquiry.jpg') }}" alt="Daiquiry" style="max-width: 100%; height: 150px;" class="d-inline-block">
+            <br>
+            <a href="/daiquiry" class="btn btn-primary d-inline-block" style="width: 100px;">Daiquiri</a>
+        </div>
+        <div class="col-md-2 mb-2">
+            <img src="{{ url_for('static', filename='images/margarita.jpg') }}" alt="Margarita" style="max-width: 100%; height: 150px;" class="d-inline-block">
+            <br>
+            <a href="/margarita" class="btn btn-primary d-inline-block" style="width: 100px;">Margarita</a>
+        </div>
+        <div class="col-md-2 mb-2">
+            <img src="{{ url_for('static', filename='images/oldfashioned.jpg') }}" alt="Old Fashioned" style="max-width: 100%; height: 150px;" class="d-inline-block">
+            <br>
+            <a href="/woodford" class="btn btn-primary d-inline-block" style="width: 100px;">Old Fashioned</a>
+        </div>
+        <div class="col-md-2 mb-2">
+            <img src="{{ url_for('static', filename='images/pinacolada.jpg') }}" alt="Pina Colada" style="max-width: 100%; height: 150px;" class="d-inline-block">
+            <br>
+            <a href="/pinacolada" class="btn btn-primary d-inline-block" style="width: 100px;">Pina Colada</a>
+        </div>
+        <div class="col-md-2 mb-2">
+            <img src="{{ url_for('static', filename='images/maitai.jpg') }}" alt="Mai Tai" style="max-width: 100%; height: 150px;" class="d-inline-block">
+            <br>
+            <a href="/maitai" class="btn btn-primary d-inline-block" style="width: 100px;">Mai Tai</a>
+        </div>
+        <!-- Dodajte ovde još slika i dugmadi -->
+    </div>
+</div>
+        <a href="/personalized" class="btn btn-primary">Nazad</a>
+
+
+
+
+        <!-- Forma za pretragu -->
+        <form method="POST" action="/search">
+            <label for="ingredient" style="color: white;">Pretražite koktele po sastojku:</label>
+            <input type="text" id="ingredient" name="ingredient" required>
+            <button type="submit">Pretraži</button>
+        </form>
+    </div>
+
+    <!-- Dodajte Bootstrap JavaScript i jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

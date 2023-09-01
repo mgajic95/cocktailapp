@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalji o Mai Tai</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Dodajte Bootstrap CSS link ovde -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Dodajte Bootstrap container za sadržaj -->
+    <div class="container">
+        <h1 class="text-center text-white">Mai Tai</h1>
+
+        <!-- Prikazivanje slike "Mojito" -->
+        <img src="{{ url_for('static', filename='images/maitai.jpg') }}" alt="Mai Tai" style="max-width: 300px;">
+
+        <!-- Detalji o koktelu -->
+        <h2 style="color: white">Mai Tai</h2>
+        <p style="color: white">Ovo je osnovni recept za Mai Tai koktel...</p>
+        <p style="color: white">Havana 7<br>Almond syrup 15ml<br>Simple syrup 15m<br>Lime 30ml<br>Pineapple juice 30ml<br>
+            cinnamon 1dash
+        </p>
+
+        <!-- Dugme za povratak na prethodnu stranicu -->
+        <a href="/cocktail_list_all" class="btn btn-primary">Nazad</a>
+    </div>
+
+    <!-- Dodajte Bootstrap JavaScript i jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

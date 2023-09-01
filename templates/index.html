@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cocktail App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Dodajte Bootstrap CSS link ovde -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Dodajte Bootstrap container za sadržaj -->
+    <div class="container">
+        <h1 class="text-center text-white">Cocktail App</h1>
+
+        <!-- Forma za unos korisničkog imena -->
+        <form method="POST" action="/set_name">
+            <label for="user_name" style="color: white;">Unesite Vaše korisničko ime:</label>
+            <input type="text" id="user_name" name="user_name" required>
+            <button type="submit">Potvrdi</button>
+        </form>
+    </div>
+
+    <!-- Dodajte Bootstrap JavaScript i jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

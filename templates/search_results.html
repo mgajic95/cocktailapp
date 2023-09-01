@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+
+    <!-- Dodajte Bootstrap CSS link ovde -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Dodajte stilove za pozadinsku sliku i centriranje -->
+
+</head>
+<body>
+    <div class="container">
+        <h1>Rezultati pretrage</h1>
+        <ul style="color: white">
+            {% for cocktail, ingredients in cocktails.items() %}
+                <li>{{ cocktail }}: {{ ', '.join(ingredients) }}</li>
+            {% endfor %}
+        </ul>
+        <a href="/">Nazad na početnu stranicu</a><br>
+        <a href="/cocktail_list_all">Nazad pretragu</a>
+    </div>
+
+    <!-- Dodajte Bootstrap JavaScript i jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
